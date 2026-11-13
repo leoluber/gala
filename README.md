@@ -1,9 +1,12 @@
 
 # GaLa Spectrum Fitting
 
-A lightweight Python toolkit for fitting photoluminescence spectra using the Gaussian-Asymmetric Laplace (GaLa) lineshape.
+A lightweight Python toolkit for quantitative analysis of semiconductor nanocrystal ensembles using photoluminescence spectroscopy.
 
-The GaLa model describes asymmetric emission spectra through the convolution of a Gaussian distribution with asymmetric exponential tails. It provides a compact framework for characterizing spectral broadening and deviations from ideal ensemble emission.
+The Gaussian-Asymmetric Laplace (GaLa) framework captures a common statistical structure in ensemble photoluminescence across a wide variety of semiconductor nanocrystals by describing emission as the convolution of a Gaussian contribution with independent low- and high-energy spectral tails.
+
+GaLa transforms spectral lineshapes into quantitative information about the emissive ensemble. Its parameters capture distinct contributions to spectral broadening, can be used to investigate temperature-dependent emission, and, where an appropriate size–energy relationship is available, provide access to relative nanocrystal size dispersion. Systematic deviations between experimental spectra and the fitted lineshape can further reveal hidden emissive subpopulations.
+
 
 The model is described in:
 
