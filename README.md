@@ -1,5 +1,5 @@
 
-# GaLa Spectrum Fitting
+# GaLa Lineshape
 
 A lightweight Python toolkit for quantitative analysis of semiconductor nanocrystal ensembles using photoluminescence spectroscopy.
 
@@ -11,8 +11,8 @@ GaLa transforms spectral lineshapes into quantitative information about the emis
 The model is described in:
 
 > L. Luber, D. Benedikt, A. Singldinger, A. S. Urban,  
-> *Universal Statistics of Nanocrystal Photoluminescence*.  
-> [Preprint, DOI: 10.21203/rs.3.rs-8603272/v1](https://doi.org/10.21203/rs.3.rs-8603272/v1).
+> *Photoluminescence as a Quantitative Probe of Semiconductor Nanocrystals*.  
+> [Nano Lett. 2026; 10.1021/acs.nanolett.6c04076](https://doi.org/10.1021/acs.nanolett.6c04076).
 
 ---
 
@@ -45,7 +45,7 @@ gala-spectrum-fitting/
 
 ## Input data
 
-Experimental spectra can be provided as CSV or whitespace-delimited TXT files.
+Experimental spectra can be provided as CSV or TXT files.
 
 The input data should contain two columns:
 
