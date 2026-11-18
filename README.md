@@ -8,11 +8,21 @@ The Gaussian-Asymmetric Laplace (GaLa) framework captures a common statistical s
 GaLa transforms spectral lineshapes into quantitative information about the emissive ensemble. Its parameters capture distinct contributions to spectral broadening, can be used to investigate temperature-dependent emission, and, where an appropriate size–energy relationship is available, provide access to relative nanocrystal size dispersion. Systematic deviations between experimental spectra and the fitted lineshape can further reveal hidden emissive subpopulations.
 
 
+## Publication
+
 The model is described in:
 
-> L. Luber, D. Benedikt, A. Singldinger, A. S. Urban,  
+> L. Luber, L. Reim, D. Benedikt, A. Singldinger, A. S. Urban,  
 > *Photoluminescence as a Quantitative Probe of Semiconductor Nanocrystals*.  
 > [Nano Lett. 2026; 10.1021/acs.nanolett.6c04076](https://doi.org/10.1021/acs.nanolett.6c04076).
+
+
+A preprint of this work is available here:
+
+> L. Luber, D. Benedikt, A. Singldinger, A. S. Urban,  
+> *Universal statistics of nanocrystal photoluminescence*.  
+> [Preprint, Research Square](https://doi.org/10.21203/rs.3.rs-8603272/v1).
+
 
 ---
 
