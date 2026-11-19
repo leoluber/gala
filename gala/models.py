@@ -1,6 +1,6 @@
 
 import numpy as np
-from scipy.special import erfc
+from scipy.special import erfc, erfcx
 from scipy.interpolate import interp1d
 from scipy.signal import fftconvolve
 
@@ -31,17 +31,29 @@ def fastGaLa(
     x0 = x_0 * 1000
     x = x - x0
 
-    L = (
-        np.exp(x / w_l + sigma**2 / (2 * w_l**2))
-        * erfc((x + sigma**2 / w_l) / (np.sqrt(2) * sigma))
-    )
+    # - erfc-based implementation - #
+    # L = (
+    #     np.exp(x / w_l + sigma**2 / (2 * w_l**2))
+    #     * erfc((x + sigma**2 / w_l) / (np.sqrt(2) * sigma))
+    # )
 
-    R = (
-        np.exp(-x / w_h + sigma**2 / (2 * w_h**2))
-        * erfc((-x + sigma**2 / w_h) / (np.sqrt(2) * sigma))
+    # R = (
+    #     np.exp(-x / w_h + sigma**2 / (2 * w_h**2))
+    #     * erfc((-x + sigma**2 / w_h) / (np.sqrt(2) * sigma))
+    # )
+
+    # - a more numerically stable implementation using erfcx instead of erfc - #
+    L = np.exp(-x**2/(2*sigma**2)) * erfcx(
+        (x + sigma**2/w_l)/(np.sqrt(2)*sigma)
+    )
+    R = np.exp(-x**2/(2*sigma**2)) * erfcx(
+        (-x + sigma**2/w_h)/(np.sqrt(2)*sigma)
     )
 
     f = L + R
+
+    if not np.all(np.isfinite(f)) or np.max(f) == 0:
+        return np.full_like(x, np.nan, dtype=float)
 
     return A * f / np.max(f) + y
 
